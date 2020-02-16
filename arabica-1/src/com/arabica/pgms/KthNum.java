@@ -1,4 +1,4 @@
-package com.arabica.main;
+package com.arabica.pgms;
 
 import java.util.Arrays;
 
