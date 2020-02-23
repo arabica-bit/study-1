@@ -25,7 +25,9 @@ public class DepthFirstSearch {
 	 * 1) 재귀함수 방식으로 풀었다. stack으로도 구현할 수 있으나 여기선 사용하지 않았다.
 	 * 2) order를 search(numbers, sum, order++, 1)했더니, order가 증가하지 않아 무한루프에 빠졌다.
 	 * 3) ++order로 바꾸거나 지금 풀이처럼 미리 증가시켜놓을 것.
-	 * 4) 마커라는 파라미터를 따로 두지 않고 푸는 방법이 일반적인데, 나는 생각못했다.
+	 * 4) 마커라는 파라미터를 따로 두지 않고 입력 파라미터에 +sum, -sum하는 방식으로 
+	 *    파라미터를 하나 줄일수 있던데, 나는 생각못했다.
+	 *    
 	 * @date 2020-02-16 완료.
 	 */
 	public int solution(int[] numbers, int target) {
