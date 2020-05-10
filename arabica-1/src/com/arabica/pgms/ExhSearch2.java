@@ -28,7 +28,7 @@ public class ExhSearch2 {
 	 * 1) 소수를 구할땐, 에라토스테네스의 체를 이용.
 	 * 2) 가능한 숫자의 조합을 모두 구하는 방법은? 순서가 중요하니 순열이용.
 	 * 3) HashMap의 key는 자동정렬인줄 알았는데... 아닌가?
-	 * 4) @TODO 순열을 구하는 방법은 다시 생각해본다.
+	 * 4) 순열을 구하는 방법은 다시 생각해본다. -> @com.arabica.basic.Permutation1 참고
 	 * 
 	 * @date 2020-05-01 완료.
 	 */
@@ -109,9 +109,9 @@ public class ExhSearch2 {
         }
 
         for (int i = depth; i < n; i++) {
-            swap(arr, depth, i);
-            permutation(arr, depth + 1, n, r);
-            swap(arr, depth, i);
+            swap(arr, depth, i); 				// 1. 순서 변경
+            permutation(arr, depth + 1, n, r); 	// 2. 다음 조합 호출
+            swap(arr, depth, i);				// 3. 원래 순서로 되돌림
         }
     }
 
