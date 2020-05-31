@@ -82,7 +82,7 @@ public class Greedy {
         for(int j=0; j<lost.length; j++) {
         	int t = lost[j];
         	System.out.println("## t: " + t + " ##");
-        	if(rsvMap.containsKey(t)) {
+        	if(rsvMap.containsKey(t)) {	//잃어버린 스스로에게 여벌이 있는지
         		System.out.println("Pick from (t)");
         		showList(rsvMap);
         		answer++;
@@ -90,7 +90,7 @@ public class Greedy {
         		showList(rsvMap);
         		continue;
         	}
-        	if(rsvMap.containsKey(t-1)) {
+        	if(rsvMap.containsKey(t-1)) {	//왼쪽 사람이 여벌이 있는지 
         		showList(rsvMap);
         		System.out.println("Pick from (t-1)");
         		answer++;
@@ -98,7 +98,7 @@ public class Greedy {
         		showList(rsvMap);
         		continue;
         	}
-        	if(rsvMap.containsKey(t+1)) {
+        	if(rsvMap.containsKey(t+1)) {	//오른쪽 사람에게 여벌이 있는지
         		if(j<(lost.length-1) && lost[j+1]==(t+1)) {
         			continue;
         		}

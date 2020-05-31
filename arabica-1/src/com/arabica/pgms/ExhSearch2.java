@@ -104,6 +104,7 @@ public class ExhSearch2 {
 	//swap을 통해서 순열을 구하는 방식
 	public void permutation(String[] arr, int depth, int n, int r) {
         if (depth == r) {
+        	//depth가 제한된 길이r에 해당하면 현재 재귀 함수를 종료.
             print(arr, r);
             return;
         }
