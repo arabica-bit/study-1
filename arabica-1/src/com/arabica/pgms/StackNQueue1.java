@@ -3,11 +3,11 @@ package com.arabica.pgms;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Queue1 {
+public class StackNQueue1 {
 
 	public static void main(String[] args) {
 		System.out.println("#----------------------#");
-		Queue1 sol = new Queue1();
+		StackNQueue1 sol = new StackNQueue1();
 		
 		//Params
 		int bridge_length = 100;
