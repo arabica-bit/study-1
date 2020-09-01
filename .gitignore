@@ -1,5 +1,8 @@
-﻿.metadata
+.metadata
 */.project
 */.classpath
 */bin
 arabica-1/src/com/arabica/codility
+*/.idea
+.DS_Store
+*.iml
