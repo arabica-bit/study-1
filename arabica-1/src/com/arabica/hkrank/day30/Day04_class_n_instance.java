@@ -1,5 +1,4 @@
-package com.arabica.hkrank;
-import java.io.*;
+package com.arabica.hkrank.day30;
 import java.util.*;
 /**
  * 30 days of code

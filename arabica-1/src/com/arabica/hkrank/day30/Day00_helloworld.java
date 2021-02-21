@@ -1,3 +1,5 @@
+package com.arabica.hkrank.day30;
+
 import java.util.Scanner;
 
 /**
