@@ -1,0 +1,38 @@
+package com.arabica.hkrank.day30;
+
+import java.util.Scanner;
+
+/**
+ * 30 days of code
+ * 17일차 : More Exceptions
+ * 원하는 메시지와 함께 throw 던지기.
+ */
+public class Day17_MoreException {
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+        int t = in.nextInt();
+        while (t-- > 0) {
+
+            int n = in.nextInt();
+            int p = in.nextInt();
+            Calculator_1 myCalculator = new Calculator_1();
+            try {
+                int ans = myCalculator.power(n, p);
+                System.out.println(ans);
+            }
+            catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        in.close();
+    }
+}
+
+class Calculator_1 {
+    int power(int n, int p) throws Exception {
+        if(n<0 || p<0) throw new Exception("n and p should be non-negative");
+
+        return (int)Math.pow(n, p);
+    }
+}

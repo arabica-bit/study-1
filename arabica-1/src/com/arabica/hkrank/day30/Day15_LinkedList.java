@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Day15_LinkedList {
     public static Node insert(Node head,int data) {
         //Complete this method
-        //head is null then return head
+        //if head is null then return head
         //else find the last node that has no pointer.
         if(head == null){
             head = new Node(data);
