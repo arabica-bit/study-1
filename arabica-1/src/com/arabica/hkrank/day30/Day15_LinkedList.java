@@ -7,29 +7,29 @@ import java.util.Scanner;
  * 노드의 next를 이용하여 계속 노드를 이어가야 함. 별 생각없이 진행하면 노드가 이어지지 않고 head와 마지막 노드만 남는 사례 발생.
  */
 public class Day15_LinkedList {
-    public static Node insert(Node head,int data) {
+    public static Node2 insert(Node2 head,int data) {
         //Complete this method
         //if head is null then return head
-        //else find the last node that has no pointer.
+        //else find the last Node2 that has no pointer.
         if(head == null){
-            head = new Node(data);
+            head = new Node2(data);
             return head;
         }
 
-        Node node = head;
-        while(node != null){
-            if(node.next == null){
-                node.next = new Node(data);
+        Node2 Node2 = head;
+        while(Node2 != null){
+            if(Node2.next == null){
+                Node2.next = new Node2(data);
                 break;
             }
-            node = node.next;
+            Node2 = Node2.next;
         }
 
         return head;
     }
 
-    public static void display(Node head) {
-        Node start = head;
+    public static void display(Node2 head) {
+        Node2 start = head;
         while(start != null) {
             System.out.print(start.data + " ");
             start = start.next;
@@ -38,7 +38,7 @@ public class Day15_LinkedList {
 
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        Node head = null;
+        Node2 head = null;
         int N = sc.nextInt();
 
         while(N-- > 0) {
@@ -50,10 +50,11 @@ public class Day15_LinkedList {
     }
 }
 
-class Node {
+//다른 코드와 겹쳐서 Node2로 이름 바꿈. 나중에 패키지로 처리할것..
+class Node2 {
     int data;
-    Node next;
-    Node(int d) {
+    Node2 next;
+    Node2(int d) {
         data = d;
         next = null;
     }
